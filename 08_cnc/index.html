@@ -39,15 +39,14 @@ The goal for this week was to use a CNC machine to mill a custom PCB to use as f
 
 <p class="margin">   </p>
 <div class="class\">
-  <img src="tablet_stand_ai.png" alt="screenshot of vector design in Illustrator">
+  <img src="Screenshot 2026-07-21 at 14.35.41.png" alt="screenshot of schematics in KiCad">
 </div>
 <p class="caption"></p>
 
-At first, I was running into odd behavior when defining toolpaths for the shape
-in Aspire, but eventually, with the help of the TAs, I managed to figure out
-that I had forgotten to close one of the vector paths. Once I fixed that, I was
-able to define all the tool paths in Aspire and cut out the parts on the ShopBot.
-The cutting bit was far scarier than I was anticipating!
+This first part was very tedious. It involved looking at every input of the stepper motor driver and XIAO-ESP32-C3 to 
+  figure out what inputs and outputs were connected to each other, and thus which to wire to power, which to wire to ground, and which to wire
+  to each other. After manually drawing the relationships, KiCad allowed us to initialize all of the layers and manually draw the wiring routes, at which point the need for 
+  jump resistors presented itself.
 
 <p class="margin">   </p>
 <div class="flexrow">
