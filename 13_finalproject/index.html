@@ -23,7 +23,7 @@
 <div class="textcontainer">
 <p class="margin"></p>
 
-<h3>Final Project: A Custom Macro Keypad</h3>
+<h3>Final Project: A Pressure-sensing and corrective insole</h3>
 
 <p class="margin"></p>
 <p class="margin"></p>
@@ -42,45 +42,22 @@
 </div>
 <p class="margin"></p>
 
-<h4>Phase 1: Brainstorming</h4>
+<h4>Phase 1: Ideation</h4>
 
 <p class="margin"></p>
-I had been planning to make this for my final project since I applied to the course.
-I had this idea because outside of classes, my main activity is doing
-lighting design and programming for performances on and off Harvard's campus.
-Macro keypads are a common sight among professional lighting programmers because
-the control software that we use for theatrical lights has a command-line interface,
-and some of the more advanced or specialized commands can get very long. It's far
-more efficient to be able to trigger common commands with a single button press,
-especially the longer commands that take a while to type out.
+The motivation for this project arose from my knowledge of complications in sports medicine and phyical therapy, where
+  cases of individuals requiring corrective surgery or suffering from preventable back and/or knee problems due to 
+  years of misbalanced gait are entirely too common. I wanted to build a sole that could adaptively respond to the unique
+  pressure pattern that users impressed into it, and change shape to redistribute pressure in a more balanced way.
+This was about as far as I had gotten during the brainstorming phase, still being unaware of what to use as an end effector and how to adjust 
+  the shape of the sole, as well as what materials to make it out of, and how to machine it.
 
-In the brainstorming phase, my specifications for my final project were nebulous.
-The base functionality I wanted was to have several buttons to trigger macros, plus
-a "program" button that would let you capture key press sequences from your computer's
-keyboard and dynamically assign that to a specific button. However, I also had
-other features that the keypad would ideally include:
+
 
 <p class="margin"></p>
-
-<ol>
-  <li>Two encoder wheels, for controlling what are called "Non-Intensity Parameters"
-      (like a light's pan, tilt, and color)</li>
-  <li>A slider or button to switch between different "profiles," so that the
-      keypad buttons could be mapped to twice or three times as many macros</li>
-  <li>A small display screen, to provide user feedback on the status of the
-      keypad or what macro was just triggered.</li>
-</ol>
-
-<p class="margin"></p>
-During this phase, I made several sketches and diagrams by myself and while talking
-to Ibrahim and the other lab TFs to try to pin down how I wanted my project to end up.
-
-<p class="margin"></p>
-<div class="flexrow">
-  <img src="fp-sketch.png" alt="a piece of paper with some diagrams drawn in black marker">
-  <img src="fp-sketch2.jpg" alt="a screenshot of possible keypad layouts">
-</div>
-<p class="caption">Some early diagrams of what the keypad layout could be.</p>
+Early ideas of the end effector included some kind of aeration or intubation into foam, but I didn't find a way to do that in a way that would be
+  effective under the weight of an entire human body. Another idea was to use servo motors to pull on a string to bend the fabric, but the servos 
+  weren't nearly powerful or resilient enough to make that much of an impact without getting fried.
 
 
 <p class="margin"></p>
@@ -88,11 +65,9 @@ to Ibrahim and the other lab TFs to try to pin down how I wanted my project to e
 <h4>Phase 2: Prototyping</h4>
 
 <p class="margin"></p>
-The prototyping phase of this project really kicked off with my
-<a href="../07_outputs/index.html">Minimum Viable Product</a> assignment during
-week 6 of the course. You can read up on the outcome of my MVP on its page, but
-essentially at the end of week 6 I had a good starting foundation for the macro
-functionality of my keypad. I had also realized several problems, though:
+During the prototyping phase, I hadn't actually managed to solve this problem. I was able to machine the body of the sole, as well as make functional 
+  voltage dividers out of force-sensitive resistors, and even calibrate them to certain outputs, first using LEDs and then various motor types. But all methods of 
+  sole deformation failed under weight, despite successful testing, as shown below:
 
 <p class="margin"></p>
 <ul>
