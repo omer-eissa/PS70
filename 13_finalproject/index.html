@@ -69,28 +69,29 @@ During the prototyping phase, I hadn't actually managed to solve this problem. I
   voltage dividers out of force-sensitive resistors, and even calibrate them to certain outputs, first using LEDs and then various motor types. But all methods of 
   sole deformation failed under weight, despite successful testing, as shown below:
 
-<p class="margin"></p>
-<ul>
-  <li>I didn't actually know how to key my computer to register an Arduino board
-      as a keyboard-like input device, as opposed to an Arduino.</li>
-  <li>I also didn't know how to record key presses from my computer's keyboard
-      and send them back to the Arduino.</li>
-  <li>I really wasn't sure what the circuit architecture of my final project
-      would look like.</li>
-</ul>
+  <iframe width="315" height="560"
+  src="https://www.youtube.com/embed/vERe63yoY6s?is=WCuqkfI4anB7ARoq"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
 
 <p class="margin"></p>
-With the help of Bobby and the other TFs, I figured out that I could use the
-Arduino <a href="https://www.arduino.cc/reference/en/language/functions/usb/keyboard/">Keyboard</a>
-library to send key presses to my computer. Getting the computer
-to talk back to the Arduino was looking more complicated, so I ended up scrapping
-the dynamic progammability aspect in favor of just setting what the macros did
-ahead of time in the Arduino code. However, I did keep the idea of a 'profile'
-slider switch that would let me toggle between two layers of macros.
-For my MVP, I had used an Arduino Uno, but then
-I switched to an ESP 32 C3 Dev Module; once I figured out I would be using the
-Keyboard library (which isn't supported on ESP 32), I switched to an Adafruit
-ItsyBitsy M4 Express that I found in the lab, which worked wonderfully.
+What's being shown above isn't explicitly obvious. I ended up going with four
+  pressure sensors. One on the toe, one on the heel, one on the ball of the foot (inside)
+  and one on the arch (outside). My code functions in a way such that, if there is a time-delayed difference between a peak in pressure on the toe
+  and pressure on the heel that exceeds a certain threshold, the motor corresponding to the lesser-pressed of the two will vibrate, prompting the user to change their gait and redistribute pressure. This worked
+  similarly across the arch-ball axis, except I used a smaller time delay.
+  I found that this positive reinforcement loop was more satisfying than the reverse (i.e. vibrating the motor on the joint with too much pressure)
+  since that felt like an electric shock and more of an irritant than anything else. This implementation felt "collaborative" and clinical, like I was learning from the sole
+  instead of fighting it.
+
+<p class="margin"></p>
+After this point, I was able to vacuum-form the sole such that the fabric stuck togther. This step was very frequently delayed because of the wiring constantly falling apart under flexion. 
+  I didn't find a better solution than using copper tape, but soldering wires to it made it incredibly fragile. This was soothed in some proportion by using foam and leather as opposed to, 
+  for example, silicone. Also, the foam layer underneath the sole allowed me to use DC motors since the foam was robust enough to withstand the weight of a person. It also gave me increased spatial
+  resolution on the sensors, which helped in calibration, since now I was getting non-zero readings from pressure that wasn't precisely on the sensors.
 
 <p class="margin"></p>
 <div class="flexrow">
